@@ -1,0 +1,4311 @@
+
+ --- Table  1: Summary of nuclide data: 
+
+ Data for 77 nuclides included in calculation:
+
+ - No transport nuclides
+ - No dosimetry nuclides
+ - No decay nuclides
+ - 308 reaction channels
+ - 77 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - All reaction linked to target
+
+ Columns:
+
+  1. Index
+  2. Level (first occurence in transmutation paths)
+  3. Name (nuclide identifier data)
+  4. Library ID
+  5. Primary data type: TRA = transport
+                        DOS = dosimetry
+                        SAB = thermal scattering
+                        DEC = only decay data
+                        STR = only structural data (mass)
+                        PHO = photon interaction data
+  6. Z (atomic number)
+  7. A (isotope number)
+  8. I (isomeric state)
+  9. Atomic weight
+ 10. Temperature (in Kelvin)
+ 11. Decay constant (1/s)
+ 12. Flags: I - nuclide is present in initial composition
+            B - nuclide is involved in burnup calculation
+            A - nuclide is produced as activation product
+            D - nuclide is produced as decay product
+            F - nuclide is produced as fission product
+            B - nuclide is produced in decay or transmutation branching
+            T - nuclide has neutron transport cross section data
+            S - nuclide has S(a,b) data
+            I - nuclide has isomeric branching reactions
+            F - nuclide is fissile
+            P - nuclide is a delayed neutron precursor
+            D - nuclide has delayed neutron data
+            U - nuclide has uses ures ptable data
+            T - nuclide cross sections are adjusted by TMS
+            D - nuclide has dosimetry cross section data
+            R - nuclide has radioactive decay data
+            N - nuclide has neutron-induced fission yield data
+            S - nuclide has spontaneous fission yield data
+            P - nuclide has photon transport cross section data
+            T - nuclide has supplementary transmutation cross section data
+            D - nuclide is used to provide 0K data for DBRC
+
+    1   0  1000.84p      84p  PHO    1   0 0    1.00790     0.0          N/A  I-----------------P--  natural hydrogen (H-nat)
+    2   0  2000.84p      84p  PHO    2   0 0    4.00260     0.0          N/A  I-----------------P--  natural helium (He-nat)
+    3   0  3000.84p      84p  PHO    3   0 0    6.94101     0.0          N/A  I-----------------P--  natural lithium (Li-nat)
+    4   0  4000.84p      84p  PHO    4   0 0    9.01219     0.0          N/A  I-----------------P--  natural beryllium (Be-nat)
+    5   0  5000.84p      84p  PHO    5   0 0   10.80996     0.0          N/A  I-----------------P--  natural boron (B-nat)
+    6   0  6000.84p      84p  PHO    6   0 0   12.01098     0.0          N/A  I-----------------P--  natural carbon (C-nat)
+    7   0  7000.84p      84p  PHO    7   0 0   14.00672     0.0          N/A  I-----------------P--  natural nitrogen (N-nat)
+    8   0  8000.84p      84p  PHO    8   0 0   15.99944     0.0          N/A  I-----------------P--  natural oxygen (O-nat)
+    9   0  14000.84p     84p  PHO   14   0 0   28.08597     0.0          N/A  I-----------------P--  natural silicon (Si-nat)
+   10   0  24000.84p     84p  PHO   24   0 0   51.99597     0.0          N/A  I-----------------P--  natural chromium (Cr-nat)
+   11   0  25000.84p     84p  PHO   25   0 0   54.93805     0.0          N/A  I-----------------P--  natural manganese (Mn-nat)
+   12   0  26000.84p     84p  PHO   26   0 0   55.84706     0.0          N/A  I-----------------P--  natural iron (Fe-nat)
+   13   0  27000.84p     84p  PHO   27   0 0   58.93327     0.0          N/A  I-----------------P--  natural cobalt (Co-nat)
+   14   0  28000.84p     84p  PHO   28   0 0   58.71005     0.0          N/A  I-----------------P--  natural nickel (Ni-nat)
+   15   0  29000.84p     84p  PHO   29   0 0   63.54599     0.0          N/A  I-----------------P--  natural copper (Cu-nat)
+   16   0  30000.84p     84p  PHO   30   0 0   65.38005     0.0          N/A  I-----------------P--  natural zinc (Zn-nat)
+   17   0  31000.84p     84p  PHO   31   0 0   69.72003     0.0          N/A  I-----------------P--  natural gallium (Ga-nat)
+   18   0  32000.84p     84p  PHO   32   0 0   72.59009     0.0          N/A  I-----------------P--  natural germanium (Ge-nat)
+   19   0  33000.84p     84p  PHO   33   0 0   74.92162     0.0          N/A  I-----------------P--  natural arsenic (As-nat)
+   20   0  34000.84p     84p  PHO   34   0 0   78.96001     0.0          N/A  I-----------------P--  natural selenium (Se-nat)
+   21   0  35000.84p     84p  PHO   35   0 0   79.90402     0.0          N/A  I-----------------P--  natural bromine (Br-nat)
+   22   0  36000.84p     84p  PHO   36   0 0   83.80009     0.0          N/A  I-----------------P--  natural krypton (Kr-nat)
+   23   0  37000.84p     84p  PHO   37   0 0   85.46781     0.0          N/A  I-----------------P--  natural rubidium (Rb-nat)
+   24   0  38000.84p     84p  PHO   38   0 0   87.62010     0.0          N/A  I-----------------P--  natural strontium (Sr-nat)
+   25   0  39000.84p     84p  PHO   39   0 0   88.90595     0.0          N/A  I-----------------P--  natural yttrium (Y-nat)
+   26   0  40000.84p     84p  PHO   40   0 0   91.22003     0.0          N/A  I-----------------P--  natural zirconium (Zr-nat)
+   27   0  41000.84p     84p  PHO   41   0 0   92.90641     0.0          N/A  I-----------------P--  natural niobium (Nb-nat)
+   28   0  42000.84p     84p  PHO   42   0 0   95.94008     0.0          N/A  I-----------------P--  natural molybdenum (Mo-nat)
+   29   0  43000.84p     84p  PHO   43   0 0   96.90648     0.0          N/A  I-----------------P--  natural technetium (Tc-nat)
+   30   0  44000.84p     84p  PHO   44   0 0  101.07025     0.0          N/A  I-----------------P--  natural ruthenium (Ru-nat)
+   31   0  45000.84p     84p  PHO   45   0 0  102.90602     0.0          N/A  I-----------------P--  natural rhodium (Rh-nat)
+   32   0  46000.84p     84p  PHO   46   0 0  106.40003     0.0          N/A  I-----------------P--  natural palladium (Pd-nat)
+   33   0  47000.84p     84p  PHO   47   0 0  107.86764     0.0          N/A  I-----------------P--  natural silver (Ag-nat)
+   34   0  48000.84p     84p  PHO   48   0 0  112.40058     0.0          N/A  I-----------------P--  natural cadmium (Cd-nat)
+   35   0  49000.84p     84p  PHO   49   0 0  114.82037     0.0          N/A  I-----------------P--  natural indium (In-nat)
+   36   0  50000.84p     84p  PHO   50   0 0  118.68961     0.0          N/A  I-----------------P--  natural tin (Sn-nat)
+   37   0  51000.84p     84p  PHO   51   0 0  121.74990     0.0          N/A  I-----------------P--  natural antimony (Sb-nat)
+   38   0  52000.84p     84p  PHO   52   0 0  127.60015     0.0          N/A  I-----------------P--  natural tellurium (Te-nat)
+   39   0  53000.84p     84p  PHO   53   0 0  126.90417     0.0          N/A  I-----------------P--  natural iodine (I-nat)
+   40   0  54000.84p     84p  PHO   54   0 0  131.29994     0.0          N/A  I-----------------P--  natural xenon (Xe-nat)
+   41   0  55000.84p     84p  PHO   55   0 0  132.90573     0.0          N/A  I-----------------P--  natural cesium (Cs-nat)
+   42   0  56000.84p     84p  PHO   56   0 0  137.33982     0.0          N/A  I-----------------P--  natural barium (Ba-nat)
+   43   0  57000.84p     84p  PHO   57   0 0  138.90527     0.0          N/A  I-----------------P--  natural lanthanum (La-nat)
+   44   0  58000.84p     84p  PHO   58   0 0  140.11970     0.0          N/A  I-----------------P--  natural cerium (Ce-nat)
+   45   0  59000.84p     84p  PHO   59   0 0  140.90747     0.0          N/A  I-----------------P--  natural praseodymium (Pr-nat)
+   46   0  60000.84p     84p  PHO   60   0 0  144.24010     0.0          N/A  I-----------------P--  natural neodymium (Nd-nat)
+   47   0  61000.84p     84p  PHO   61   0 0  144.91288     0.0          N/A  I-----------------P--  natural promethium (Pm-nat)
+   48   0  62000.84p     84p  PHO   62   0 0  150.40002     0.0          N/A  I-----------------P--  natural samarium (Sm-nat)
+   49   0  63000.84p     84p  PHO   63   0 0  151.96042     0.0          N/A  I-----------------P--  natural europium (Eu-nat)
+   50   0  64000.84p     84p  PHO   64   0 0  157.24986     0.0          N/A  I-----------------P--  natural gadolinium (Gd-nat)
+   51   0  65000.84p     84p  PHO   65   0 0  158.92525     0.0          N/A  I-----------------P--  natural terbium (Tb-nat)
+   52   0  66000.84p     84p  PHO   66   0 0  162.49996     0.0          N/A  I-----------------P--  natural dysprosium (Dy-nat)
+   53   0  67000.84p     84p  PHO   67   0 0  164.93084     0.0          N/A  I-----------------P--  natural holmium (Ho-nat)
+   54   0  68000.84p     84p  PHO   68   0 0  167.25985     0.0          N/A  I-----------------P--  natural erbium (Er-nat)
+   55   0  69000.84p     84p  PHO   69   0 0  168.93424     0.0          N/A  I-----------------P--  natural thulium (Tm-nat)
+   56   0  70000.84p     84p  PHO   70   0 0  173.04051     0.0          N/A  I-----------------P--  natural ytterbium (Yb-nat)
+   57   0  71000.84p     84p  PHO   71   0 0  174.97009     0.0          N/A  I-----------------P--  natural lutetium (Lu-nat)
+   58   0  72000.84p     84p  PHO   72   0 0  178.49033     0.0          N/A  I-----------------P--  natural hafnium (Hf-nat)
+   59   0  80000.84p     84p  PHO   80   0 0  200.59018     0.0          N/A  I-----------------P--  natural mercury (Hg-nat)
+   60   0  81000.84p     84p  PHO   81   0 0  204.37065     0.0          N/A  I-----------------P--  natural thallium (Tl-nat)
+   61   0  82000.84p     84p  PHO   82   0 0  207.19996     0.0          N/A  I-----------------P--  natural lead (Pb-nat)
+   62   0  83000.84p     84p  PHO   83   0 0  208.98025     0.0          N/A  I-----------------P--  natural bismuth (Bi-nat)
+   63   0  84000.84p     84p  PHO   84   0 0  209.00042     0.0          N/A  I-----------------P--  natural polonium (Po-nat)
+   64   0  85000.84p     84p  PHO   85   0 0  210.00001     0.0          N/A  I-----------------P--  natural astatine (At-nat)
+   65   0  86000.84p     84p  PHO   86   0 0  222.01826     0.0          N/A  I-----------------P--  natural radon (Rn-nat)
+   66   0  87000.84p     84p  PHO   87   0 0  222.99969     0.0          N/A  I-----------------P--  natural francium (Fr-nat)
+   67   0  88000.84p     84p  PHO   88   0 0  226.02568     0.0          N/A  I-----------------P--  natural radium (Ra-nat)
+   68   0  89000.84p     84p  PHO   89   0 0  227.00005     0.0          N/A  I-----------------P--  natural actinium (Ac-nat)
+   69   0  90000.84p     84p  PHO   90   0 0  232.03833     0.0          N/A  I-----------------P--  natural thorium (Th-nat)
+   70   0  91000.84p     84p  PHO   91   0 0  231.03572     0.0          N/A  I-----------------P--  natural protactinium (Pa-nat)
+   71   0  92000.84p     84p  PHO   92   0 0  238.02879     0.0          N/A  I-----------------P--  natural uranium (U-nat)
+   72   0  93000.84p     84p  PHO   93   0 0  237.04837     0.0          N/A  I-----------------P--  natural neptunium (Np-nat)
+   73   0  94000.84p     84p  PHO   94   0 0  244.06465     0.0          N/A  I-----------------P--  natural plutonium (Pu-nat)
+   74   0  95000.84p     84p  PHO   95   0 0  242.99949     0.0          N/A  I-----------------P--  natural americium (Am-nat)
+   75   0  96000.84p     84p  PHO   96   0 0  246.99986     0.0          N/A  I-----------------P--  natural curium (Cm-nat)
+   76   0  97000.84p     84p  PHO   97   0 0  246.99986     0.0          N/A  I-----------------P--  natural berkelium (Bk-nat)
+   77   0  98000.84p     84p  PHO   98   0 0  251.00023     0.0          N/A  I-----------------P--  natural californium (Cf-nat)
+
+ --- Table  2: Reaction and decay data: 
+
+ Nuclide    1 / 77 : 1000.84p -- natural hydrogen (H-nat)
+
+ Pointers                     : 1965366 128107
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 10000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 1.00790
+ Atomic weight ratio (AWR)    : 0.99924
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    2 / 77 : 2000.84p -- natural helium (He-nat)
+
+ Pointers                     : 1965842 128131
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 20000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 4.00260
+ Atomic weight ratio (AWR)    : 3.96822
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    3 / 77 : 3000.84p -- natural lithium (Li-nat)
+
+ Pointers                     : 1966318 128155
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 30000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 6.94101
+ Atomic weight ratio (AWR)    : 6.88138
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    4 / 77 : 4000.84p -- natural beryllium (Be-nat)
+
+ Pointers                     : 1966794 128179
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 40000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 9.01219
+ Atomic weight ratio (AWR)    : 8.93477
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    5 / 77 : 5000.84p -- natural boron (B-nat)
+
+ Pointers                     : 1967270 128203
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 50000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 10.80996
+ Atomic weight ratio (AWR)    : 10.71710
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    6 / 77 : 6000.84p -- natural carbon (C-nat)
+
+ Pointers                     : 1967746 128227
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 60000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 12.01098
+ Atomic weight ratio (AWR)    : 11.90780
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    7 / 77 : 7000.84p -- natural nitrogen (N-nat)
+
+ Pointers                     : 1968222 128251
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 70000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 14.00672
+ Atomic weight ratio (AWR)    : 13.88640
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    8 / 77 : 8000.84p -- natural oxygen (O-nat)
+
+ Pointers                     : 1968698 128275
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 80000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 15.99944
+ Atomic weight ratio (AWR)    : 15.86200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide    9 / 77 : 14000.84p -- natural silicon (Si-nat)
+
+ Pointers                     : 1969174 128419
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 140000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 28.08597
+ Atomic weight ratio (AWR)    : 27.84470
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   10 / 77 : 24000.84p -- natural chromium (Cr-nat)
+
+ Pointers                     : 1969650 128659
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 240000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 51.99597
+ Atomic weight ratio (AWR)    : 51.54930
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   11 / 77 : 25000.84p -- natural manganese (Mn-nat)
+
+ Pointers                     : 1970126 128683
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 250000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 54.93805
+ Atomic weight ratio (AWR)    : 54.46610
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   12 / 77 : 26000.84p -- natural iron (Fe-nat)
+
+ Pointers                     : 1970602 128707
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 260000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 55.84706
+ Atomic weight ratio (AWR)    : 55.36730
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   13 / 77 : 27000.84p -- natural cobalt (Co-nat)
+
+ Pointers                     : 1971078 128731
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 270000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 58.93327
+ Atomic weight ratio (AWR)    : 58.42700
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   14 / 77 : 28000.84p -- natural nickel (Ni-nat)
+
+ Pointers                     : 1971554 128755
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 280000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 58.71005
+ Atomic weight ratio (AWR)    : 58.20570
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   15 / 77 : 29000.84p -- natural copper (Cu-nat)
+
+ Pointers                     : 1972030 128779
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 290000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 63.54599
+ Atomic weight ratio (AWR)    : 63.00010
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   16 / 77 : 30000.84p -- natural zinc (Zn-nat)
+
+ Pointers                     : 1972506 128803
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 300000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 65.38005
+ Atomic weight ratio (AWR)    : 64.81840
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   17 / 77 : 31000.84p -- natural gallium (Ga-nat)
+
+ Pointers                     : 1972982 128827
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 310000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 69.72003
+ Atomic weight ratio (AWR)    : 69.12110
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   18 / 77 : 32000.84p -- natural germanium (Ge-nat)
+
+ Pointers                     : 1973458 128851
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 320000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 72.59009
+ Atomic weight ratio (AWR)    : 71.96650
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   19 / 77 : 33000.84p -- natural arsenic (As-nat)
+
+ Pointers                     : 1973934 128875
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 330000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 74.92162
+ Atomic weight ratio (AWR)    : 74.27800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   20 / 77 : 34000.84p -- natural selenium (Se-nat)
+
+ Pointers                     : 1974410 128899
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 340000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 78.96001
+ Atomic weight ratio (AWR)    : 78.28170
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   21 / 77 : 35000.84p -- natural bromine (Br-nat)
+
+ Pointers                     : 1974886 128923
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 350000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 79.90402
+ Atomic weight ratio (AWR)    : 79.21760
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   22 / 77 : 36000.84p -- natural krypton (Kr-nat)
+
+ Pointers                     : 1975362 128947
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 360000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 83.80009
+ Atomic weight ratio (AWR)    : 83.08020
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   23 / 77 : 37000.84p -- natural rubidium (Rb-nat)
+
+ Pointers                     : 1975838 128971
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 370000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 85.46781
+ Atomic weight ratio (AWR)    : 84.73360
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   24 / 77 : 38000.84p -- natural strontium (Sr-nat)
+
+ Pointers                     : 1976314 128995
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 380000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 87.62010
+ Atomic weight ratio (AWR)    : 86.86740
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   25 / 77 : 39000.84p -- natural yttrium (Y-nat)
+
+ Pointers                     : 1976790 129019
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 390000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 88.90595
+ Atomic weight ratio (AWR)    : 88.14220
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   26 / 77 : 40000.84p -- natural zirconium (Zr-nat)
+
+ Pointers                     : 1977266 129043
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 400000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 91.22003
+ Atomic weight ratio (AWR)    : 90.43640
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   27 / 77 : 41000.84p -- natural niobium (Nb-nat)
+
+ Pointers                     : 1977742 129067
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 410000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 92.90641
+ Atomic weight ratio (AWR)    : 92.10830
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   28 / 77 : 42000.84p -- natural molybdenum (Mo-nat)
+
+ Pointers                     : 1978218 129091
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 420000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 95.94008
+ Atomic weight ratio (AWR)    : 95.11590
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   29 / 77 : 43000.84p -- natural technetium (Tc-nat)
+
+ Pointers                     : 1978694 129115
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 430000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 96.90648
+ Atomic weight ratio (AWR)    : 96.07400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   30 / 77 : 44000.84p -- natural ruthenium (Ru-nat)
+
+ Pointers                     : 1979170 129139
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 440000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 101.07025
+ Atomic weight ratio (AWR)    : 100.20200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   31 / 77 : 45000.84p -- natural rhodium (Rh-nat)
+
+ Pointers                     : 1979646 129163
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 450000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 102.90602
+ Atomic weight ratio (AWR)    : 102.02200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   32 / 77 : 46000.84p -- natural palladium (Pd-nat)
+
+ Pointers                     : 1980122 129187
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 460000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 106.40003
+ Atomic weight ratio (AWR)    : 105.48600
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   33 / 77 : 47000.84p -- natural silver (Ag-nat)
+
+ Pointers                     : 1980598 129211
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 470000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 107.86764
+ Atomic weight ratio (AWR)    : 106.94100
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   34 / 77 : 48000.84p -- natural cadmium (Cd-nat)
+
+ Pointers                     : 1981074 129235
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 480000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 112.40058
+ Atomic weight ratio (AWR)    : 111.43500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   35 / 77 : 49000.84p -- natural indium (In-nat)
+
+ Pointers                     : 1981550 129259
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 490000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 114.82037
+ Atomic weight ratio (AWR)    : 113.83400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   36 / 77 : 50000.84p -- natural tin (Sn-nat)
+
+ Pointers                     : 1982026 129283
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 500000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 118.68961
+ Atomic weight ratio (AWR)    : 117.67000
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   37 / 77 : 51000.84p -- natural antimony (Sb-nat)
+
+ Pointers                     : 1982502 129307
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 510000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 121.74990
+ Atomic weight ratio (AWR)    : 120.70400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   38 / 77 : 52000.84p -- natural tellurium (Te-nat)
+
+ Pointers                     : 1982978 129331
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 520000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 127.60015
+ Atomic weight ratio (AWR)    : 126.50400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   39 / 77 : 53000.84p -- natural iodine (I-nat)
+
+ Pointers                     : 1983454 129355
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 530000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 126.90417
+ Atomic weight ratio (AWR)    : 125.81400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   40 / 77 : 54000.84p -- natural xenon (Xe-nat)
+
+ Pointers                     : 1983930 129379
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 540000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 131.29994
+ Atomic weight ratio (AWR)    : 130.17200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   41 / 77 : 55000.84p -- natural cesium (Cs-nat)
+
+ Pointers                     : 1984406 129403
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 550000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 132.90573
+ Atomic weight ratio (AWR)    : 131.76400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   42 / 77 : 56000.84p -- natural barium (Ba-nat)
+
+ Pointers                     : 1984882 129427
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 560000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 137.33982
+ Atomic weight ratio (AWR)    : 136.16000
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   43 / 77 : 57000.84p -- natural lanthanum (La-nat)
+
+ Pointers                     : 1985358 129451
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 570000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 138.90527
+ Atomic weight ratio (AWR)    : 137.71200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   44 / 77 : 58000.84p -- natural cerium (Ce-nat)
+
+ Pointers                     : 1985834 129475
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 580000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 140.11970
+ Atomic weight ratio (AWR)    : 138.91600
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   45 / 77 : 59000.84p -- natural praseodymium (Pr-nat)
+
+ Pointers                     : 1986310 129499
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 590000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 140.90747
+ Atomic weight ratio (AWR)    : 139.69700
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   46 / 77 : 60000.84p -- natural neodymium (Nd-nat)
+
+ Pointers                     : 1986786 129523
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 600000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 144.24010
+ Atomic weight ratio (AWR)    : 143.00100
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   47 / 77 : 61000.84p -- natural promethium (Pm-nat)
+
+ Pointers                     : 1987262 129547
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 610000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 144.91288
+ Atomic weight ratio (AWR)    : 143.66800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   48 / 77 : 62000.84p -- natural samarium (Sm-nat)
+
+ Pointers                     : 1987738 129571
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 620000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 150.40002
+ Atomic weight ratio (AWR)    : 149.10800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   49 / 77 : 63000.84p -- natural europium (Eu-nat)
+
+ Pointers                     : 1988214 129595
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 630000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 151.96042
+ Atomic weight ratio (AWR)    : 150.65500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   50 / 77 : 64000.84p -- natural gadolinium (Gd-nat)
+
+ Pointers                     : 1988690 129619
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 640000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 157.24986
+ Atomic weight ratio (AWR)    : 155.89900
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   51 / 77 : 65000.84p -- natural terbium (Tb-nat)
+
+ Pointers                     : 1989166 129643
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 650000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 158.92525
+ Atomic weight ratio (AWR)    : 157.56000
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   52 / 77 : 66000.84p -- natural dysprosium (Dy-nat)
+
+ Pointers                     : 1989642 129667
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 660000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 162.49996
+ Atomic weight ratio (AWR)    : 161.10400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   53 / 77 : 67000.84p -- natural holmium (Ho-nat)
+
+ Pointers                     : 1990118 129691
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 670000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 164.93084
+ Atomic weight ratio (AWR)    : 163.51400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   54 / 77 : 68000.84p -- natural erbium (Er-nat)
+
+ Pointers                     : 1990594 129715
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 680000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 167.25985
+ Atomic weight ratio (AWR)    : 165.82300
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   55 / 77 : 69000.84p -- natural thulium (Tm-nat)
+
+ Pointers                     : 1991070 129739
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 690000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 168.93424
+ Atomic weight ratio (AWR)    : 167.48300
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   56 / 77 : 70000.84p -- natural ytterbium (Yb-nat)
+
+ Pointers                     : 1991546 129763
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 700000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 173.04051
+ Atomic weight ratio (AWR)    : 171.55400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   57 / 77 : 71000.84p -- natural lutetium (Lu-nat)
+
+ Pointers                     : 1992022 129787
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 710000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 174.97009
+ Atomic weight ratio (AWR)    : 173.46700
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   58 / 77 : 72000.84p -- natural hafnium (Hf-nat)
+
+ Pointers                     : 1992498 129811
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 720000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 178.49033
+ Atomic weight ratio (AWR)    : 176.95700
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   59 / 77 : 80000.84p -- natural mercury (Hg-nat)
+
+ Pointers                     : 1992974 130003
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 800000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 200.59018
+ Atomic weight ratio (AWR)    : 198.86700
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   60 / 77 : 81000.84p -- natural thallium (Tl-nat)
+
+ Pointers                     : 1993450 130027
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 810000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 204.37065
+ Atomic weight ratio (AWR)    : 202.61500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   61 / 77 : 82000.84p -- natural lead (Pb-nat)
+
+ Pointers                     : 1993926 130051
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 820000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 207.19996
+ Atomic weight ratio (AWR)    : 205.42000
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   62 / 77 : 83000.84p -- natural bismuth (Bi-nat)
+
+ Pointers                     : 1994402 130075
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 830000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 208.98025
+ Atomic weight ratio (AWR)    : 207.18500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   63 / 77 : 84000.84p -- natural polonium (Po-nat)
+
+ Pointers                     : 1994878 130099
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 840000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 209.00042
+ Atomic weight ratio (AWR)    : 207.20500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   64 / 77 : 85000.84p -- natural astatine (At-nat)
+
+ Pointers                     : 1995354 130123
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 850000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 210.00001
+ Atomic weight ratio (AWR)    : 208.19600
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   65 / 77 : 86000.84p -- natural radon (Rn-nat)
+
+ Pointers                     : 1995830 130147
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 860000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 222.01826
+ Atomic weight ratio (AWR)    : 220.11100
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   66 / 77 : 87000.84p -- natural francium (Fr-nat)
+
+ Pointers                     : 1996306 130171
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 870000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 222.99969
+ Atomic weight ratio (AWR)    : 221.08400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   67 / 77 : 88000.84p -- natural radium (Ra-nat)
+
+ Pointers                     : 1996782 130195
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 880000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 226.02568
+ Atomic weight ratio (AWR)    : 224.08400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   68 / 77 : 89000.84p -- natural actinium (Ac-nat)
+
+ Pointers                     : 1997258 130219
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 890000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 227.00005
+ Atomic weight ratio (AWR)    : 225.05000
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   69 / 77 : 90000.84p -- natural thorium (Th-nat)
+
+ Pointers                     : 1997734 130243
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 900000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 232.03833
+ Atomic weight ratio (AWR)    : 230.04500
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   70 / 77 : 91000.84p -- natural protactinium (Pa-nat)
+
+ Pointers                     : 1998210 130267
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 910000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 231.03572
+ Atomic weight ratio (AWR)    : 229.05100
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   71 / 77 : 92000.84p -- natural uranium (U-nat)
+
+ Pointers                     : 1998686 130291
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 920000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 238.02879
+ Atomic weight ratio (AWR)    : 235.98400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   72 / 77 : 93000.84p -- natural neptunium (Np-nat)
+
+ Pointers                     : 1999162 130315
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 930000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 237.04837
+ Atomic weight ratio (AWR)    : 235.01200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   73 / 77 : 94000.84p -- natural plutonium (Pu-nat)
+
+ Pointers                     : 1999638 130339
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 940000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 244.06465
+ Atomic weight ratio (AWR)    : 241.96800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   74 / 77 : 95000.84p -- natural americium (Am-nat)
+
+ Pointers                     : 2000114 130363
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 950000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 242.99949
+ Atomic weight ratio (AWR)    : 240.91200
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   75 / 77 : 96000.84p -- natural curium (Cm-nat)
+
+ Pointers                     : 2000590 130387
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 960000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 246.99986
+ Atomic weight ratio (AWR)    : 244.87800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   76 / 77 : 97000.84p -- natural berkelium (Bk-nat)
+
+ Pointers                     : 2001066 130411
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 970000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 246.99986
+ Atomic weight ratio (AWR)    : 244.87800
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ Nuclide   77 / 77 : 98000.84p -- natural californium (Cf-nat)
+
+ Pointers                     : 2001542 130435
+ Primary type                 : Photon interaction
+ Nuclide ZAI                  : 980000
+ Library ID                   : 84p
+ Cross section data file      : /global/home/groups/co_nuclear/serpent_photon_data/xsdata/mcplib84
+ Atomic weight (AW)           : 251.00023
+ Atomic weight ratio (AWR)    : 248.84400
+ Temperature                  : 0.0 Kelvin
+ XS temperature               : 0.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-03 1.00000E+05
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has no neutron transport data
+ - Nuclide has photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 4 reaction channels
+ - 1 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 4 reactions channel:
+
+   1    MT =    504  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Compton scattering
+   2    MT =    502  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : Rayleigh scattering
+   3    MT =    522  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : photoelectric effect
+   4    MT =    516  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : pair production
+
+ 1 special reaction:
+
+   1    MT =    301  Q =  0.00000E+00 MeV  Emin = 1.00000E-03 MeV  : total heat production
+
+ --- Table  5: Summary of material compositions: 
+
+ 7 materials included in calculation
+
+
+Material "decay0_R1Z1G1":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 7.34733E-02 1/barn*cm
+ - Mass density 1.04968E+01 g/cm3
+ - Volume 3.62634E-01 cm3
+ - Mass 3.80648E+00 g
+ - Photon emission rate 1.13336E+14 1/s
+ - Neutron emission rate 2.01184E+11 1/s
+ - 76 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 504.03 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  1000.84p    1.00790    0.0  2.03298E-11  2.76696E-10  3.24153E-12 
+  2000.84p    4.00260    0.0  1.91180E-07  2.60203E-06  1.21056E-07 
+  3000.84p    6.94101    0.0  8.67993E-26  1.18137E-24  9.53102E-26 
+  4000.84p    9.01219    0.0  2.31229E-20  3.14712E-19  3.29666E-20 
+  5000.84p   10.80996    0.0  9.82933E-22  1.33781E-20  1.68093E-21 
+  6000.84p   12.01098    0.0  1.18213E-02  1.60892E-01  2.24617E-02 
+  7000.84p   14.00672    0.0  5.07954E-17  6.91345E-16  1.12554E-16 
+  8000.84p   15.99944    0.0  3.54635E-02  4.82672E-01  8.97607E-02 
+ 24000.84p   51.99597    0.0  1.83192E-25  2.49331E-24  1.50687E-24 
+ 25000.84p   54.93805    0.0  1.48393E-22  2.01969E-21  1.28970E-21 
+ 26000.84p   55.84706    0.0  5.85857E-20  7.97374E-19  5.17598E-19 
+ 27000.84p   58.93327    0.0  3.48467E-19  4.74278E-18  3.24880E-18 
+ 28000.84p   58.71005    0.0  3.48004E-14  4.73648E-13  3.23220E-13 
+ 29000.84p   63.54599    0.0  1.18714E-13  1.61575E-12  1.19342E-12 
+ 30000.84p   65.38005    0.0  2.53608E-10  3.45171E-09  2.62307E-09 
+ 31000.84p   69.72003    0.0  4.82279E-10  6.56401E-09  5.31933E-09 
+ 32000.84p   72.59009    0.0  9.29965E-08  1.26572E-06  1.06793E-06 
+ 33000.84p   74.92162    0.0  2.88123E-08  3.92147E-07  3.41496E-07 
+ 34000.84p   78.96001    0.0  1.26102E-05  1.71629E-04  1.57517E-04 
+ 35000.84p   79.90402    0.0  4.93285E-06  6.71380E-05  6.23544E-05 
+ 36000.84p   83.80009    0.0  8.45036E-05  1.15013E-03  1.12026E-03 
+ 37000.84p   85.46781    0.0  8.16469E-05  1.11125E-03  1.10393E-03 
+ 38000.84p   87.62010    0.0  2.27183E-04  3.09205E-03  3.14906E-03 
+ 39000.84p   88.90595    0.0  1.15237E-04  1.56843E-03  1.62078E-03 
+ 40000.84p   91.22003    0.0  7.34646E-04  9.99883E-03  1.06015E-02 
+ 41000.84p   92.90641    0.0  2.49195E-05  3.39164E-04  3.66256E-04 
+ 42000.84p   95.94008    0.0  5.48194E-04  7.46114E-03  8.32023E-03 
+ 43000.84p   96.90648    0.0  1.42539E-04  1.94001E-03  2.18518E-03 
+ 44000.84p  101.07025    0.0  3.81613E-04  5.19391E-03  6.10165E-03 
+ 45000.84p  102.90602    0.0  6.29037E-05  8.56145E-04  1.02404E-03 
+ 46000.84p  106.40003    0.0  1.09818E-04  1.49467E-03  1.84849E-03 
+ 47000.84p  107.86764    0.0  7.52056E-06  1.02358E-04  1.28334E-04 
+ 48000.84p  112.40058    0.0  6.56314E-06  8.93269E-05  1.16703E-04 
+ 49000.84p  114.82037    0.0  2.08950E-07  2.84389E-06  3.79544E-06 
+ 50000.84p  118.68961    0.0  5.81141E-06  7.90956E-05  1.09118E-04 
+ 51000.84p  121.74990    0.0  2.03829E-06  2.77419E-05  3.92586E-05 
+ 52000.84p  127.60015    0.0  6.06052E-05  8.24860E-04  1.22338E-03 
+ 53000.84p  126.90417    0.0  2.50991E-05  3.41609E-04  5.03888E-04 
+ 54000.84p  131.29994    0.0  7.01432E-04  9.54676E-03  1.45697E-02 
+ 55000.84p  132.90573    0.0  3.53134E-04  4.80629E-03  7.42478E-03 
+ 56000.84p  137.33982    0.0  1.79397E-04  2.44166E-03  3.89772E-03 
+ 57000.84p  138.90527    0.0  1.59262E-04  2.16763E-03  3.49972E-03 
+ 58000.84p  140.11970    0.0  4.05588E-04  5.52021E-03  8.99052E-03 
+ 59000.84p  140.90747    0.0  1.30643E-04  1.77810E-03  2.91219E-03 
+ 60000.84p  144.24010    0.0  4.10244E-04  5.58358E-03  9.36114E-03 
+ 61000.84p  144.91288    0.0  3.16125E-05  4.30259E-04  7.24714E-04 
+ 62000.84p  150.40002    0.0  6.35784E-05  8.65327E-04  1.51272E-03 
+ 63000.84p  151.96042    0.0  1.33794E-05  1.82098E-04  3.21637E-04 
+ 64000.84p  157.24986    0.0  4.78060E-06  6.50659E-05  1.18925E-04 
+ 65000.84p  158.92525    0.0  1.51267E-07  2.05881E-06  3.80311E-06 
+ 66000.84p  162.49996    0.0  4.99902E-08  6.80386E-07  1.28510E-06 
+ 67000.84p  164.93084    0.0  2.67893E-09  3.64613E-08  6.98979E-08 
+ 68000.84p  167.25985    0.0  7.23977E-10  9.85361E-09  1.91565E-08 
+ 69000.84p  168.93424    0.0  1.39849E-11  1.90340E-10  3.73746E-10 
+ 70000.84p  173.04051    0.0  1.32775E-12  1.80712E-11  3.63467E-11 
+ 71000.84p  174.97009    0.0  5.60587E-20  7.62981E-19  1.55170E-18 
+ 72000.84p  178.49033    0.0  7.80377E-22  1.06212E-20  2.20353E-20 
+ 80000.84p  200.59018    0.0  9.75720E-34  1.32799E-32  3.09625E-32 
+ 81000.84p  204.37065    0.0  1.58637E-21  2.15912E-20  5.12891E-20 
+ 82000.84p  207.19996    0.0  1.03393E-16  1.40723E-15  3.38909E-15 
+ 83000.84p  208.98025    0.0  9.00722E-20  1.22592E-18  2.97781E-18 
+ 84000.84p  209.00042    0.0  9.98052E-23  1.35839E-21  3.29990E-21 
+ 85000.84p  210.00001    0.0  2.71996E-29  3.70198E-28  9.03614E-28 
+ 86000.84p  222.01826    0.0  1.34725E-21  1.83366E-20  4.73192E-20 
+ 87000.84p  222.99969    0.0  6.13365E-25  8.34814E-24  2.16383E-23 
+ 88000.84p  226.02568    0.0  7.68439E-18  1.04588E-16  2.74769E-16 
+ 89000.84p  227.00005    0.0  1.37993E-17  1.87814E-16  4.95545E-16 
+ 90000.84p  232.03833    0.0  6.29829E-12  8.57222E-11  2.31197E-10 
+ 91000.84p  231.03572    0.0  2.20663E-12  3.00331E-11  8.06510E-11 
+ 92000.84p  238.02879    0.0  2.05685E-02  2.79945E-01  7.74520E-01 
+ 93000.84p  237.04837    0.0  3.50759E-05  4.77396E-04  1.31536E-03 
+ 94000.84p  244.06465    0.0  4.89841E-04  6.66692E-03  1.89130E-02 
+ 95000.84p  242.99949    0.0  2.47751E-06  3.37199E-05  9.52406E-05 
+ 96000.84p  246.99986    0.0  4.79711E-07  6.52905E-06  1.87446E-05 
+ 97000.84p  246.99986    0.0  5.55534E-16  7.56104E-15  2.17074E-14 
+ 98000.84p  251.00023    0.0  3.30030E-17  4.49184E-16  1.31047E-15 
+       sum                    7.34733E-02  1.00000E+00  1.00021E+00
+-------------------------------------------------------------------
+
+Material "decay0_R1Z1G1_SiC":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 9.55834E-02 1/barn*cm
+ - Mass density 3.18000E+00 g/cm3
+ - Volume 5.43636E-01 cm3
+ - Mass 1.72876E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 2 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 341.68 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  4.78433E-02  5.00540E-01  3.00074E-01 
+ 14000.84p   28.08597    0.0  4.77401E-02  4.99460E-01  7.00167E-01 
+       sum                    9.55834E-02  1.00000E+00  1.00024E+00
+-------------------------------------------------------------------
+
+Material "decay0_R1Z1G1_PyC":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 9.53403E-02 1/barn*cm
+ - Mass density 1.90000E+00 g/cm3
+ - Volume 1.25563E+00 cm3
+ - Mass 2.38570E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 340.40 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  9.53403E-02  1.00000E+00  1.00082E+00 
+       sum                    9.53403E-02  1.00000E+00  1.00082E+00
+-------------------------------------------------------------------
+
+Material "decay0_R1Z1G1_buffer":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 5.26881E-02 1/barn*cm
+ - Mass density 1.05000E+00 g/cm3
+ - Volume 7.90664E-01 cm3
+ - Mass 8.30197E-01 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 340.41 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  5.26881E-02  1.00000E+00  1.00082E+00 
+       sum                    5.26881E-02  1.00000E+00  1.00082E+00
+-------------------------------------------------------------------
+
+Material "decay0_R1Z1G1_matrix":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 8.73117E-02 1/barn*cm
+ - Mass density 1.74000E+00 g/cm3
+ - Volume 9.02200E+40 cm3
+ - Mass 1.56983E+41 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 340.41 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  8.73117E-02  1.00000E+00  1.00082E+00 
+       sum                    8.73117E-02  1.00000E+00  1.00082E+00
+-------------------------------------------------------------------
+
+Material "pebgraph":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 8.73117E-02 1/barn*cm
+ - Mass density 1.74000E+00 g/cm3
+ - Volume 1.10084E+01 cm3
+ - Mass 1.91547E+01 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 340.40 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  8.73117E-02  1.00000E+00  1.00082E+00 
+       sum                    8.73117E-02  1.00000E+00  1.00082E+00
+-------------------------------------------------------------------
+
+Material "pebshell":
+
+ - Material is not burnable
+ - Material is included in majorant
+ - Material is included in geometry
+ - Atom density 8.73117E-02 1/barn*cm
+ - Mass density 1.74000E+00 g/cm3
+ - Volume 9.08130E+00 cm3
+ - Mass 1.58015E+01 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 340.40 kb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.84p   12.01098    0.0  8.73117E-02  1.00000E+00  1.00082E+00 
+       sum                    8.73117E-02  1.00000E+00  1.00082E+00
+-------------------------------------------------------------------

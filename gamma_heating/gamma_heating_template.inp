@@ -1,0 +1,80 @@
+surf infinite inf
+surf bound cuboid -50 50 -50 500 -25 25
+
+cell boundary  0  outside  bound
+
+surf crystal_surf cuboid -5 5 -<crystal_half_width> <crystal_half_width> -0.3 0.3
+
+surf collimator_inner_surf cyly 0 0 0.25 -50 -0.001
+surf collimator_exit cyly 0 0 0.25 -0.01 0.0
+surf collimator_outer_surf cyly 0 0 2.00 -50 0
+cell collimator_cell 0 lead collimator_inner_surf -collimator_outer_surf 
+
+trans S crystal_surf  0 350 0    -<angle> 0 0     1
+
+cell crystal_cell 0 silicium -crystal_surf
+cell air_cell 0 air crystal_surf -bound collimator_outer_surf
+cell air_collim_cell 0 air -collimator_inner_surf collimator_exit
+cell collimator_exit_cell 0 air -collimator_exit
+
+mat silicium -2.33000E+00 rgb 255 100 100
+14028.00c  -9.18665E-01
+14029.00c  -4.83363E-02
+14030.00c  -3.29988E-02
+
+
+mat lead -1.13500E+01 rgb 145 145 145
+82204.00c  -1.37808E-02
+82206.00c  -2.39555E-01
+82207.00c  -2.20743E-01
+82208.00c  -5.25921E-01
+
+mat air -1.20500E-03 rgb 255 255 255
+ 6012.00c  -1.22564E-04
+ 6013.00c  -1.43645E-06
+ 7014.00c  -7.52324E-01
+ 7015.00c  -2.94416E-03
+ 8016.00c  -2.31153E-01
+ 8017.00c  -9.35803E-05
+ 8018.00c  -5.34540E-04
+18036.00c  -3.88624E-05
+18038.00c  -7.70386E-06
+18040.00c  -1.27804E-02
+
+src collimated_source p
+  se <source_energy>
+  sc collimator_exit_cell
+  sd 0 1 0
+  sy -0.01 0.0
+  sx -0.25 0.25
+  sz -0.25 0.25
+  %sa 0.28648
+
+det gamma_heating p
+  dm silicium
+  dr 301 silicium
+
+det inward_gamma_current p
+  ds crystal_surf  -1
+
+%plot 1 5500 400  0    -50 500  -20 20
+%plot 3 1000 5500
+
+set srcrate 1
+
+
+set nps 100000
+set seed  42
+% set acelib  "/global/home/groups/co_nuclear/serpent/xsdata/endfb7/sss_endfb7u.xsdata" "/global/home/groups/co_nuclear/serpent_photon_data/mcplib.xsdata"
+% set declib  "/global/home/groups/co_nuclear/serpent/xsdata/endfb7/sss_endfb7.dec"
+set pdatadir  "/global/home/groups/co_nuclear/serpent_photon_data/photon_data"
+set acelib "/global/scratch/users/co_nuclear/endf8/endf8.xsdata" "/global/home/groups/co_nuclear/serpent_photon_data/mcplib.xsdata"
+set declib "/global/scratch/users/co_nuclear/endf8/endf8.dec"
+set nfylib "/global/scratch/users/co_nuclear/endf8/endf8.nfy"
+%set nfylib  "/global/home/groups/co_nuclear/serpent/xsdata/endfb7/sss_endfb7.nfy"
+set opti  4
+set gcu  -1
+set repro  0
+set shbuf  0 0
+set ecut 1.0E-3 1.0E-3
+
