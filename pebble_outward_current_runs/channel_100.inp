@@ -1422,7 +1422,7 @@ set bc 1
 
 src decay p
   sm decay0_R1Z1G1
-  se 0.001125
+  se 0.6021019539078156
 
 det current p
   ds pebble_outer 0
@@ -1447,4 +1447,4 @@ set shbuf  0 0
 set ecut 1.0E-6 1.0E-6
 
 ene detector_grid 1 
-0.      0.00112 0.00113
+0.           0.6020969539 0.6021069539
