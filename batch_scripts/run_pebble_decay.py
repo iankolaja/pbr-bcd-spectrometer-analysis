@@ -15,6 +15,7 @@ working_directory = "decay_runs"
 # argument handling
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--start')
+parser.add_argument('-e', '--end')
 parser.add_argument('-c', '--cores')
 args = parser.parse_args()
 
