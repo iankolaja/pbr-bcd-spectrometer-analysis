@@ -5,15 +5,9 @@ from material import *
 
 from scipy.stats import norm
 
-grid_file = "gadras_energy_grid.npy"
-ENERGY_GRID = np.load(grid_file)
 
 PEBBLE_FUEL_VOLUME = 0.36263376 #0.025**3*np.pi*4/3*8335
 
-#ENERGY_GRID = np.zeros(16001)
-#ENERGY_GRID[0:6001] = 0.00015*np.arange(6001)
-#ENERGY_GRID[6000:12001] = ENERGY_GRID[6000] + 0.0003*np.arange(6001)
-#ENERGY_GRID[12000:16001] = ENERGY_GRID[12000] + 0.0012*np.arange(4001)
 
 def run_pebble_decay_current_sample(source_energy, channel, template_path, energy_grid, num_cores,
                               triso_file, particles, debug = 1, repeat_calc = False):
@@ -107,98 +101,6 @@ def rename_ZAI_columns(dataframe):
 
     return renamed_dataframe
 
-def natural_sort(l): 
-    convert = lambda text: int(text) if text.isdigit() else text.lower()
-    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key)]
-    return sorted(l, key=alphanum_key)
-
-
-# Function to read a restart file and extract material data. Can put any ZAI in ZAI_fields, or one/multiple of the following in nonZAI_fiels: n, name, bu_global, bu_days, nnuc, adens, mdens, burnup 
-def read_restart(list_paths, step=0, mat_parent=None, nonZAI_fields=['burnup'], ZAI_fields=[], df=True, min_ZAI_adens=None, parent_only=False, printing=True):
-    '''
-    Function by Yves to extract materials from a restart file.
-    '''
-    if isinstance(list_paths, str):
-        list_paths = [list_paths]
-    materials = dict()
-    ZAI_indices = []
-    for path_to_file in list_paths:
-        if printing:
-            print(path_to_file)
-        current_step = -1
-        burnups = dict()
-        # Read restart file
-        with open(path_to_file, mode='rb') as file:  # b is important -> binary
-            while True:
-                s = file.read(8)
-                if not s:
-                    break
-                material = {}
-                material['n'] = struct.unpack("q", s)[0]  # length of material name
-                material['name'] = struct.unpack("{}s".format(material['n']), file.read(material['n']))[0].decode('UTF-8') # material name
-                material['bu_global'] = struct.unpack("d", file.read(8))[0] # BU of snapshot
-                material['bu_days'] = struct.unpack("d", file.read(8))[0] # time of snapshot
-                material['nnuc'] = struct.unpack("q", file.read(8))[0] # Number of nuclides in material
-                material['adens'] = struct.unpack("d", file.read(8))[0] # Atomic density of material
-                material['mdens'] = struct.unpack("d", file.read(8))[0] # Mass density of material
-                material['burnup'] = struct.unpack("d", file.read(8))[0] # Burnup of material
-                if len(burnups) == 0 or material['bu_global'] != burnups[list(burnups.keys())[-1]]:
-                    current_step += 1
-                    burnups[current_step] = material['bu_global']
-
-                # Check if material name matches
-                if mat_parent and ((not parent_only and material['name'][:min(len(mat_parent), len(material['name']))+1] != f'{mat_parent}z') or current_step != step):
-                    # Seek to the next block by calculating the number of bytes to skip
-                    bytes_to_skip = 16 * material['nnuc']  # Size of the data block (16 bytes for each nuclide)
-                    file.seek(bytes_to_skip, 1)  # Move the file pointer forward by the calculated number of bytes
-                    continue
-
-                materials[material['name']] = {field: material[field] for field in nonZAI_fields}
-                if len(ZAI_fields)==0:
-                    # Seek to the next block by calculating the number of bytes to skip
-                    file.seek(16 * material['nnuc'], 1)  # Move the file pointer forward by the calculated number of bytes
-                    continue
-
-                # Just once
-                if len(ZAI_indices) == 0:
-                    adens_list = []
-                    ZAI_list = []
-                    for i in range(material['nnuc']):
-                        ZAI, adens = struct.unpack("qd", file.read(16))
-                        ZAI_list.append(ZAI)
-                        adens_list.append(adens)
-                    if isinstance(ZAI_fields, str) and ZAI_fields=='all':
-                        ZAI_indices = range(len(ZAI_list))
-                        ZAI_fields = ZAI_list
-                    else:
-                        ZAI_indices = [ZAI_list.index(int(ZAI)) for ZAI in ZAI_fields]
-                    ZAI_indices, ZAI_fields = zip(*sorted(zip(ZAI_indices, ZAI_fields)))
-                    ZAI_empty = {key: True for key in ZAI_fields}
-                    for i, index in enumerate(ZAI_indices):
-                        if not min_ZAI_adens or adens_list[index] > min_ZAI_adens: 
-                            materials[material['name']][int(ZAI_fields[i])] = adens_list[index]
-                            ZAI_empty[int(ZAI_fields[i])] = False
-                        
-                # The rest of the cases
-                else:
-                    last_index = 0
-                    for i in range(len(ZAI_fields)):
-                        index = ZAI_indices[i]
-                        file.seek(16*(index-last_index), 1)
-                        ZAI, adens = struct.unpack("qd", file.read(16))
-                        if not min_ZAI_adens or adens > min_ZAI_adens:
-                            materials[material['name']][int(ZAI)] = adens
-                            ZAI_empty[int(ZAI)] = False
-                        last_index = int(index)+1
-                    file.seek(16*(material['nnuc']-last_index), 1)
-        
-    if df:
-        materials = pd.DataFrame.from_dict(materials, orient='index')
-        materials = materials.fillna(0).loc[natural_sort(materials.index)]
-    else:
-        materials = {key: materials[key] for key in natural_sort(materials)}
-    return materials
-    
 def run_one_pebble_decay(conc_dict, pebble_id, decay_template_path, gamma_template_path,
                                 energy_grid, decay_days, decay_days_unc, num_cores,
                                 triso_file, particles, debug = 1, repeat_calc = True):
