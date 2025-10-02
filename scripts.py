@@ -2,8 +2,11 @@ import numpy as np
 import os
 import time
 from material import *
-
+import pandas as pd
 from scipy.stats import norm
+
+grid_file = "energy_grid.npy"
+ENERGY_GRID = np.load(grid_file)
 
 
 PEBBLE_FUEL_VOLUME = 0.36263376 #0.025**3*np.pi*4/3*8335
@@ -240,3 +243,59 @@ def extract_from_bumat(file_path, return_list = True):
     else:
         concentrations[current_mat_name] = current_conc
     return concentrations
+
+
+def read_bandpass_filter(file_name):
+    data = pd.read_csv(file_name)
+    energy = data[' Energy [eV]']/1000
+    counts = data['Number of Rays weighted by $\Vert\mathbf{E_{\sigma}}+\mathbf{E_{\pi}}\Vert^2$']
+    energy_step = energy.iloc[1] - energy.iloc[0]
+    energy = np.insert(energy, 0, energy[0]-energy_step)
+    energy = np.append(energy, energy[-1]+energy_step)
+    
+    counts = np.insert(counts, 0, 0)
+    counts = np.append(counts, 0)
+
+    return pd.DataFrame({"energy":energy, "counts": counts})
+
+
+def read_single_gspec_individual(file_name):
+    gammas = []
+    with open(file_name, 'r') as f:
+        reading = False
+        for line in f:
+            if reading and next_empty:
+                next_empty = False
+            elif (len(line) < 2 and reading) or ("]" in line):
+                reading = False
+            elif reading:
+                line = line.split()
+                gamma_data = {
+                    "energy": float(line[4])*1000,
+                    "intensity": float(line[2])*float(line[5]),
+                    "isotope": isotope
+                }
+                gammas += [gamma_data]
+            if "discrete spectrum" in line:
+                reading = True
+                isotope = line.split(" ")[2]
+                next_empty = True
+    return pd.DataFrame(gammas)
+
+def simulate_simple_counts(emission_rate, 
+                         detector_distance, 
+                         detector_diameter,
+                         intrinsic_efficiency=0.1, 
+                         measurement_time = 20, 
+                         print_results = True):
+    
+    detector_solid_angle = (np.pi*(detector_diameter/2)**2)/((detector_distance)**2)
+    detection_efficiency = (detector_solid_angle/(4*np.pi))*intrinsic_efficiency
+
+    average_count_rate = emission_rate*detection_efficiency
+    sampled_counts = np.random.poisson(average_count_rate*measurement_time)[0]
+    counting_uncertainty = np.sqrt(average_count_rate/measurement_time)/average_count_rate
+    
+    if print_results:
+        print(f"Measured Counts: {sampled_counts} ({round(counting_uncertainty*100,4)}% uncertainty)")
+    return average_count_rate, sampled_counts, counting_uncertainty
